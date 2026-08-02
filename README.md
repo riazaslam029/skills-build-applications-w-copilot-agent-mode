@@ -1,12 +1,77 @@
-# Build Applications with GitHub Copilot Agent Mode
+# Octofit Tracker
 
-<img src="https://octodex.github.com/images/Professortocat_v2.png" align="right" height="200px" />
+This repository now contains a simple TypeScript multi-tier app:
 
-Hey riazaslam029!
+- Frontend: React + Vite UI for creating and listing items
+- Backend API: Express endpoints for creating and listing items
+- Data store: in-memory storage for now
 
-Mona here. I'm done preparing your exercise. Hope you enjoy! 💚
+## Project Structure
 
-Remember, it's self-paced so feel free to take a break! ☕️
+```text
+octofit-tracker/
+├── backend/
+│   ├── src/
+│   │   ├── routes/items.ts
+│   │   ├── server.ts
+│   │   ├── store/
+│   │   └── types.ts
+│   ├── package.json
+│   └── tsconfig.json
+└── frontend/
+	├── src/
+	│   ├── App.tsx
+	│   ├── index.css
+	│   ├── main.tsx
+	│   ├── services/itemsApi.ts
+	│   └── vite-env.d.ts
+	├── index.html
+	├── package.json
+	├── tsconfig.json
+	└── vite.config.ts
+```
 
-[![](https://img.shields.io/badge/Go%20to%20Exercise-%E2%86%92-1f883d?style=for-the-badge&logo=github&labelColor=197935)](https://github.com/riazaslam029/skills-build-applications-w-copilot-agent-mode/issues/1)
+## Requirements
+
+- Node.js 20 or later
+- npm
+
+## Install
+
+Run these from the repository root:
+
+```bash
+npm --prefix octofit-tracker/backend install
+npm --prefix octofit-tracker/frontend install
+```
+
+## Run
+
+Open two terminals and start both services:
+
+```bash
+npm --prefix octofit-tracker/backend run dev
+```
+
+```bash
+npm --prefix octofit-tracker/frontend run dev
+```
+
+Or start both from the repository root with one command:
+
+```bash
+npm run dev
+```
+
+Then open the frontend at `http://localhost:5173`.
+
+The backend runs at `http://localhost:8000` and exposes:
+
+- `GET /health`
+- `GET /api/items`
+- `POST /api/items`
+
+## Behavior
+
+Items are stored in memory, so they reset when the backend restarts.
 

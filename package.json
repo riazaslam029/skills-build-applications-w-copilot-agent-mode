@@ -1,0 +1,7 @@
+{
+  "name": "skills-build-applications-w-copilot-agent-mode",
+  "private": true,
+  "scripts": {
+    "dev": "node scripts/dev.mjs"
+  }
+}
